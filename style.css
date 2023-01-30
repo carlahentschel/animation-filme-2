@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: url('./images/fundo_chamas.webp');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    animation: bg-pan-top 5s both;   
+}
+
+@keyframes bg-pan-top {
+    0% {
+      background-position: 50% 100%;
+    }
+    100% {
+      background-position: 50% 0%;
+    }
+  }
+
+.simpsonsFilme {
+    z-index: 50;
+    width: 500px;
+    margin-left: 20%;
+    animation: bounce-top 0.9s both;
+}
+
+ @keyframes bounce-top {
+  0% {
+    transform: translateY(-45px);
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(-24px);
+    animation-timing-function: ease-in;
+  }
+  65% {
+    transform: translateY(-12px);
+    animation-timing-function: ease-in;
+  }
+  82% {
+    transform: translateY(-6px);
+    animation-timing-function: ease-in;
+  }
+  93% {
+    transform: translateY(-4px);
+    animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    transform: translateY(0px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateY(0px);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+
+.simpsons {
+    position: absolute;
+    bottom: 0px;
+    left: 30%;
+    justify-content: center;
+    width: 50%;
+    animation: motoSimpsons 5s infinite ease-out;
+}
+
+@keyframes motoSimpsons {
+    0% {
+        width: 40%;
+    }
+    100% {
+        width: 70%;
+    }
+}
+
+section {
+    align-self: center; 
+}
+
+article {
+    width: 400px;
+}
+
+.data {
+    font-family:'Gloria Hallelujah', cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-left: 30%;
+    animation: vibrate 0.3s linear infinite both; 
+    animation-delay: 2s;
+}
+
+ @keyframes vibrate {
+    0% {
+      transform: translate(0);
+    }
+    20% {
+      transform: translate(2px, -2px);
+    }
+    40% {
+      transform: translate(2px, 2px);
+    }
+    60% {
+      transform: translate(-2px, 2px);
+    }
+    80% {
+      transform: translate(-2px, -2px);
+    }
+    100% {
+      transform: translate(0);
+    }
+  }
